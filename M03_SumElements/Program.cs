@@ -1,7 +1,6 @@
 ﻿// Поиск суммы элементов массива
 
 int SumElements(int[] array)
-
 {
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
@@ -11,6 +10,15 @@ int SumElements(int[] array)
     return sum;
 }
 
-int[] array = { 1, 8, 2, 5, 6, 7, 3, 4 };
+int size = new Random().Next(5, 15);
+int[] array = new int[size];
+
+for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 100);
+
+for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]} ");
+Console.WriteLine();
+
 int sum = SumElements(array);
 Console.WriteLine($"Сумма элементов массива равна {sum}");
