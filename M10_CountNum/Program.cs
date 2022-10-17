@@ -8,6 +8,18 @@ int CountNum(int[] array, int value)
     return count;
 }
 
-int[] array = { 5, 2, 6, 1, 3, 4, 22, 2, 8, 20, 2, 4, 5 };
-int count = CountNum(array, 2);
+int size = new Random().Next(5, 20);
+int[] array = new int[size];
+
+for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 10);
+
+for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]} ");
+Console.WriteLine();
+
+Console.WriteLine("Введите число: ");
+int n = int.Parse(Console.ReadLine() ?? "0");
+
+int count = CountNum(array, n);
 Console.WriteLine($"Количество вхождений элемента в массив равно: {count}");
