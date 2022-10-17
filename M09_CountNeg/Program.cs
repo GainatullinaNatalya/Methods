@@ -12,4 +12,4 @@ int CountNeg(int[] array)
 
 int[] array = { 5, 2, -6, 1, 3, -4, 22, -15, -2, -5, 8, -20 };
 int count = CountNeg(array);
-Console.WriteLine($"Количество отрицательных элементов в массиву равно: {count}");
+Console.WriteLine($"Количество отрицательных элементов в массиве равно: {count}");
