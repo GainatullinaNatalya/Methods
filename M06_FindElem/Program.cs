@@ -9,6 +9,18 @@ bool FindElem(int[] array, int value)
     }
     return findElem;
 }
-int[] array = { 5, 2, 6, 1, 3, 4, 22, 15 };
-bool findNumb = FindElem(array, 10);
+int size = new Random().Next(5, 10);
+int[] array = new int[size];
+
+for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 10);
+
+for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]} ");
+Console.WriteLine();
+
+Console.WriteLine("Введите число: ");
+int n = int.Parse(Console.ReadLine() ?? "0");
+
+bool findNumb = FindElem(array, n);
 Console.WriteLine(findNumb);
