@@ -11,6 +11,15 @@ int FindMin(int[] array)
     return min;
 }
 
-int[] array = { 11, 8, 10, 2, 5, 6, 7, 3, 4, 25 };
+int size = new Random().Next(5,15);
+int[] array = new int[size];
+
+for(int i = 0; i < array.Length; i++)
+array[i] = new Random().Next(1,100);
+
+for(int i = 0; i < array.Length; i++)
+Console.Write($"{array[i]} ");
+Console.WriteLine();
+
 int min = FindMin(array);
 Console.WriteLine($"Минимальное число равно {min}");
