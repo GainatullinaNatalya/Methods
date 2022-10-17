@@ -11,6 +11,15 @@ double ArithMean(int[] array)
     return S;
 }
 
-int[] array = { 2, 5, 6, 3, 8, 10};
+int size = new Random().Next(5, 10);
+int[] array = new int[size];
+
+for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 10);
+
+for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]} ");
+Console.WriteLine();
+
 double medium = ArithMean(array);
 Console.WriteLine($"Среднее арифметическое элеметов массива: {medium}");
