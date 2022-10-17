@@ -10,6 +10,15 @@ int CountEvenNum(int[] array)
     return count;
 }
 
-int[] array = { 5, 2, 6, 1, 3, 4, 22, 5, 2, 5, 8, 20, 8 };
+int size = new Random().Next(5, 15);
+int[] array = new int[size];
+
+for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 100);
+
+for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]} ");
+Console.WriteLine();
+
 int count = CountEvenNum(array);
 Console.WriteLine($"Количество четных элементов в массиве равно: {count}");
