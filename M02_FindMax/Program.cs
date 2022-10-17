@@ -11,6 +11,15 @@ int FindMax(int[] array)
     return max;
 }
 
-int[] array = { 113, 8, 100, 2, 55, 6, 723, 3, 40, 25 };
+int size = new Random().Next(5,15);
+int[] array = new int[size];
+
+for(int i = 0; i < array.Length; i++)
+array[i] = new Random().Next(1,100);
+
+for(int i = 0; i < array.Length; i++)
+Console.Write($"{array[i]} ");
+Console.WriteLine();
+
 int max = FindMax(array);
 Console.WriteLine($"Максимальное число равно {max}");
